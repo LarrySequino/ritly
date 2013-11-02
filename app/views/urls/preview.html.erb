@@ -1,0 +1,9 @@
+<h1>Preview of <%= @url.link %></h1>
+<strong>Hash Code: </strong>
+<%= @url.hash_code %> <br />
+
+<% if @embed["html"] != nil %>
+    <%= @embed["html"].html_safe %>
+<% else %>
+    <iframe src="<%= @url.link %>"></iframe>
+<% end %>
